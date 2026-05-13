@@ -2,14 +2,11 @@
   "name": "react-js-major-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://gautamdevani14.github.io/movie-project",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
