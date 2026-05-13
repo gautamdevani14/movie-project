@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #1f1e24;
+  --secondary: #6556cd;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #181819;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+/* Wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #27272a;
+  overflow: hidden;
+  border-radius: 0.25em;
+}
+
+/* Actual select */
+.select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  flex: 1;
+  padding: 0 0.5em;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* Remove default arrow (IE) */
+.select select::-ms-expand {
+  display: none;
+}
+
+/* Custom arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #27272a;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+
+/* Hover effect */
+.select:hover::after {
+  color: var(--secondary);
+}
